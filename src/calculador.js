@@ -1,5 +1,7 @@
 import React from 'react';
 import './calculadora.css';
+import sound from './click2.mp3';
+import ReactAudioPlayer from 'react-audio-player';
 
 class Calculadora extends React.Component{
     constructor(props){
@@ -28,8 +30,6 @@ class Calculadora extends React.Component{
 
     somar(){
         this.setState({resultado: (parseFloat(this.state.num1) + parseFloat(this.state.num2)), operador:"+"});
-        let audio1 = new Audio('./click.mp3');
-        audio1.play();
     }
     subtrair(){
         this.setState({resultado: (parseFloat(this.state.num1) - parseFloat(this.state.num2)), operador:"-"});
@@ -40,13 +40,6 @@ class Calculadora extends React.Component{
     dividir(){
         this.setState({resultado: (parseFloat(this.state.num1) / parseFloat(this.state.num2)), operador:"/"});
     }
-
-    /*
-    sound(){
-        let audio1 = new Audio('./click.mp3');
-        audio1.play();
-    }
-    */
 
     render(){
         return (
@@ -80,6 +73,11 @@ class Calculadora extends React.Component{
                                 </div>
                             </div>
                         </form>
+                        <ReactAudioPlayer
+                            src={sound}
+                            autoPlay
+                            controls
+                        />
                     </div>
                 </div>
             </div>
