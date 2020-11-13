@@ -1,7 +1,6 @@
 import React from 'react';
 import './calculadora.css';
 import sound from './click2.mp3';
-import ReactAudioPlayer from 'react-audio-player';
 
 class Calculadora extends React.Component{
     constructor(props){
@@ -73,11 +72,6 @@ class Calculadora extends React.Component{
                                 </div>
                             </div>
                         </form>
-                        <ReactAudioPlayer
-                            src={sound}
-                            autoPlay
-                            controls
-                        />
                     </div>
                 </div>
             </div>
