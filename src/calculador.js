@@ -1,6 +1,7 @@
 import React from 'react';
 import './calculadora.css';
 import sound from './click2.mp3';
+import {Howl} from 'howler';
 
 class Calculadora extends React.Component{
     constructor(props){
