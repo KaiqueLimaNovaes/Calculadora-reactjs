@@ -13,6 +13,7 @@ class Calculadora extends React.Component{
             num2: 0,
             resultado: 0,
             operador: "(op)",
+            img: 0
         };
 
         this.manipulador01 = this.manipulador01.bind(this);
@@ -43,6 +44,7 @@ class Calculadora extends React.Component{
                 src: [sonic],
                 autoplay: true,
             })
+            this.state.img = easter
         }
     }
     subtrair(){
@@ -96,6 +98,7 @@ class Calculadora extends React.Component{
                         <div class="col">
                             <div id="tela">
                                 <p id="textoTela">{this.state.num1} {this.state.operador} {this.state.num2} = {this.state.resultado}</p>
+                                <img src={this.state.img} width="80px"></img>
                             </div>
                         </div>
                         <form>
