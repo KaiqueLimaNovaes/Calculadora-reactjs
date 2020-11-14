@@ -1,6 +1,8 @@
 import React from 'react';
 import './calculadora.css';
-import sound from './click2.mp3';
+import clickSound from './click2.mp3';
+import sonic from './sonicMusic.mp3';
+import easter from './sonicGif.gif';
 import {Howl} from 'howler';
 
 class Calculadora extends React.Component{
@@ -30,15 +32,60 @@ class Calculadora extends React.Component{
 
     somar(){
         this.setState({resultado: (parseFloat(this.state.num1) + parseFloat(this.state.num2)), operador:"+"});
+        //Essa constante chama o arquivo de som
+        const sound = new Howl ({
+            src: [clickSound],
+        })
+        sound.play();
+
+        if(this.state.resultado == 1991){
+            const sMusic = new Howl ({
+                src: [sonic],
+                autoplay: true,
+            })
+        }
     }
     subtrair(){
         this.setState({resultado: (parseFloat(this.state.num1) - parseFloat(this.state.num2)), operador:"-"});
+        const sound = new Howl ({
+            src: [clickSound],
+        })
+        sound.play();
+
+        if(this.state.resultado == 1991){
+            const sMusic = new Howl ({
+                src: [sonic],
+                autoplay: true,
+            })
+        }
     }
     multiplicar(){
         this.setState({resultado: (parseFloat(this.state.num1) * parseFloat(this.state.num2)), operador:"*"});
+        const sound = new Howl ({
+            src: [clickSound],
+        })
+        sound.play();
+
+        if(this.state.resultado == 1991){
+            const sMusic = new Howl ({
+                src: [sonic],
+                autoplay: true,
+            })
+        }
     }
     dividir(){
         this.setState({resultado: (parseFloat(this.state.num1) / parseFloat(this.state.num2)), operador:"/"});
+        const sound = new Howl ({
+            src: [clickSound],
+        })
+        sound.play();
+
+        if(this.state.resultado == 1991){
+            const sMusic = new Howl ({
+                src: [sonic],
+                autoplay: true,
+            })
+        }
     }
 
     render(){
