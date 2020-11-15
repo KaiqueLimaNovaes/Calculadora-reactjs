@@ -3,6 +3,7 @@ import './calculadora.css';
 import clickSound from './click2.mp3';
 import sonic from './sonicMusic.mp3';
 import easter from './sonicGif.gif';
+import voidImg from './voidImg.png';
 import {Howl} from 'howler';
 
 class Calculadora extends React.Component{
@@ -13,7 +14,7 @@ class Calculadora extends React.Component{
             num2: 0,
             resultado: 0,
             operador: "(op)",
-            img: 0
+            img: voidImg
         };
 
         this.manipulador01 = this.manipulador01.bind(this);
